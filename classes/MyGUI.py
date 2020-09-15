@@ -2,6 +2,7 @@ from tkinter import *
 from tkinterhtml import HtmlFrame
 from tkinter import messagebox
 from tkinter import font #to be able to underline label
+import math
 
 from classes.RAE import *
 
@@ -95,9 +96,10 @@ class MyGUI:
         butDefinition.config(cursor="hand2")
 
 
-    def clickDefinition(self):
+    def clickDefinition(self,word=''):
         # This method is launched with the button "Definición"
-        word = self.wordInput.get()
+        if not word:
+            word = self.wordInput.get()
         if word:
             rae = RAE(word)
             result = rae.getDefinition()
@@ -137,11 +139,8 @@ class MyGUI:
         else:
             messagebox.showinfo(message="Debe introducir una palabra", title="Mensaje de información")
 
-    def clickLabelResult(self,word):        
-        print(f"word {word}")
-        self.wordInput.delete(0,END)
-        self.wordInput.insert(0,word)        
-        self.clickDefinition()
+    def clickLabelResult(self,word):                       
+        self.clickDefinition(word)
 
     def displayListWords(self,result):
         # This method display the list Words in columns        

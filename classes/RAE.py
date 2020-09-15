@@ -1,14 +1,14 @@
 from pyquery import PyQuery as pq
 import html #to have available function html.unescape 
 import re
-import math
+
 
 class RAE:
 
     def __init__(self,word):
         self.URL = "https://dle.rae.es/"              
         self.word=word
-        self.headers={'User-Agent': 'Mozilla/5.0'}
+        self.headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
     def getDefinition(self):
         # This method get definition from word
