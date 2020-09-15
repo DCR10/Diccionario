@@ -8,7 +8,7 @@ from classes.RAE import *
 
 class MyGUI:
 
-    def __init__(self,mywindow,titulo,size='850x860',icon='D:/DAVID/empleo/Python3_curso/Proyectos/T8/audi.ico',bg='#CCCCCC'):
+    def __init__(self,mywindow,titulo,size='850x860',icon='',bg='#CCCCCC'):
         # This method create a Window
         self.mywindow=mywindow
         self.titulo=titulo
